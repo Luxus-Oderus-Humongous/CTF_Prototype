@@ -26,8 +26,35 @@ char* encryption(char* data, char* key, int dataLen, int keyLen) {
 }
 
 int main() {
-    char sec[49] = "> Give us an input and we will give you the flag";
+    char* ascii_art =
+    "                                                    @@@@@@@@@@@@@      \n"
+    "                                               *@@@@@@@@@@@@@@@@@@@@   \n"
+    "   __________  ____ _       _______         .@@@@.@.@@@@@@@@@@@@@@@@@  \n"
+    "  / ____/ __ \\/ __ \\ |     / /__  /        @@@@@../....,@@@@@@@@@@@@@@ \n"
+    " / /   / /_/ / / / / | /| / / /_ <       @@@@@@@..........@@@@@@@@@@/  \n"
+    "/ /___/ _, _/ /_/ /| |/ |/ /___/ /      @@@@@@@@@@.........@^@#@@@@@@  \n"
+    "\\____/_/ |_|\\____/ |__/|__//____/      @@@@....................@@@@    \n"
+    "                                      @@@@.......@@@@@@@@@@@@@@@@      \n"
+    "                                      @@@@@@@@@@@@@@@...\033[31mINC.\033[0m@@@@       \n"
+    "                                       @@@@@@@@@@@@@@@@@@@@@           \n"
+    "                                         /@@@@@@@@@@@@@&               \n";
 
+    char* text = 
+    	"       =[ \033[33m[REDACTED] v3.6.3-release [core:3.3 api:1.0]\033[0m\n"
+	"+ -- --=[ 481 exploits  -  310 generations\n"
+	"+ -- --=[ 176 flags - 21 encoders - 8 nops\n"
+	"       =[ svn r7957 updated \033[31m298 days ago\033[0m (2023.12.23)\n"
+	"\n"
+	"WARNING: This copy of the [REDACTED] Framework was last updated \033[31m298 days ago\033[0m.\n"
+	"	 We recommend that you update the framework at least every other day.\n"
+	"	 For information on updating your copy of [[REDACTED]]. please see:\n"
+	"		\033[33mhttps://github.com/[REDACTED]\033[0m \n"
+	"\n"
+	"|---------------------------------|\n"
+	"> The Elite generator for flag cheating\n";
+
+    char sec[49] = "> Give us an input and we will give you the flag";
+	
     printf("%s\n", ascii_art);
     printf("%s%s\n", text,sec);
 
