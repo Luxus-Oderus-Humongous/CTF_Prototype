@@ -16,7 +16,7 @@ static char *rand_string(char *str, int size) {
     return str;
 }
 
-// SECRET XOR FUNCTION
+// SECRET FUNCTION
 char* encryption(char* data, char* key, int dataLen, int keyLen) {
 	char* output = (char*)malloc(sizeof(char) * dataLen);
 	for (int i = 0; i < dataLen; ++i) {
@@ -39,7 +39,9 @@ int main() {
     while(1){
         printf("c̲r̲3 >");
         while(getchar()!='\n');
+        if (count != TBD){
             printf("\nFlag: cybersoc{%s_%s_%s}\n\n", rand_string(string,5),rand_string(string2,5),rand_string(string3,5));
+        }else {printf("Real Flag: %s\n", encryption(flag, sec, 26, keyLen)); exit(0);}
         count++;
     }
 
